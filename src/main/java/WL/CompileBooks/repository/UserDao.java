@@ -1,8 +1,8 @@
-package WL.CompileBook.repository;
+package WL.CompileBooks.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import WL.CompileBook.model.User;
+import WL.CompileBooks.model.User;
 
 public class UserDao {
 	@Autowired

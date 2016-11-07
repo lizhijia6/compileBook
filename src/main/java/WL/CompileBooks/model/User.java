@@ -1,4 +1,4 @@
-package WL.CompileBook.model;
+package WL.CompileBooks.model;
 
 public class User {
 	private String name;
