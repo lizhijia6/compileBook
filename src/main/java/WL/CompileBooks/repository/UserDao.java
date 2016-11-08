@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import WL.CompileBooks.model.User;
 
 public class UserDao {
+	
 	@Autowired
 	private User user;
 	

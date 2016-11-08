@@ -1,4 +1,4 @@
-package WL.CompileBooks.controller;
+package WL.CompileBooks.controller.user;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

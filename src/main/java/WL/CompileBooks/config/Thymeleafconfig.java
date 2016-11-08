@@ -1,14 +1,17 @@
 package WL.CompileBooks.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 import org.thymeleaf.templateresolver.TemplateResolver;
-
-public class Thymeleafconfig {
+@Configuration
+public class Thymeleafconfig extends WebMvcConfigurerAdapter{
 	@Bean
 	public ViewResolver viewResolver(SpringTemplateEngine templateEngine){
 		ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
@@ -31,4 +34,12 @@ public class Thymeleafconfig {
 		templateResolver.setTemplateMode("HTML5");
 		return templateResolver;
 	}
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		// TODO Auto-generated method stub
+		registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+		super.addResourceHandlers(registry);
+	}
+	
 }
